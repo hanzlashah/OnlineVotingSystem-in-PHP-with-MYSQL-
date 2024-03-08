@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Voting System - Registration</title>
+    <link rel="stylesheet" href="../css/stylesheet.css">
+
+    <style>
+        #address {
+            width: 23%;
+        }
+
+        #image {
+            width: 23%;
+            /* margin-right: auto;
+            margin-left: auto; */
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+        }
+        #role{
+            width: 23%;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+        }
+        #role select{
+            border-radius: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+    <div id="headerSection">
+        <h1>Online Voting System</h1>
+    </div>
+
+    <hr>
+    <div id="bodySection">
+        <h3>Registration</h3><br><br>
+        <form action="../api/register.php" method="post" enctype="multipart/form-data">
+            <input type="text" name="name" placeholder="Enter name">
+            <input type="number" name="mobile" placeholder="Enter mobile"><br><br>
+
+
+            <input type="password" name="password" placeholder="password">
+            <input type="password" name="cpassword" placeholder="Confirm Password"><br><br>
+
+
+            <input type="text" name="address" placeholder="Enter You Address" id="address"><br><br>
+            <center>
+            <div id="image"  style="display: flex; font-size: 12px;align-items: center;justify-content: center;">
+                <label for="">Uploaded Image:</label>
+                <input type="file" name="photo">
+            </div><br><br>
+            <div id="role"  style="display: flex; font-size: 12px;align-items: center;justify-content: center;">
+                <label for="">Select Role</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <select name="role">
+                    <option value="1">Voter</option>
+                    <option value="2">Group</option>
+                </select>
+            </div>
+        </center>
+           <br><br>
+            <button style="padding: 10px;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+            background-color: #48bdfb;
+            color: white;
+            font-size: 15px;" name="register" value="Register">Register</button><br><br>
+            Already user ?<a href="../index.html">Login here</a>
+        </form>
+
+    </div>
+
+</center>
+</body>
+
+</html>
